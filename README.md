@@ -1,4 +1,4 @@
-<h2>Byte Markers and Meanings for Memory Forensic</h2>
+<h2>Byte Markers and Meanings</h2>
 
 <h3>Files</h3>
 <ul>
@@ -23,3 +23,47 @@
 <li>HTML (Uppercase) tag : 3c 48 54 4d</li>
 <li>PLIST (Lowercase) tag : 70 6c 69 73 74</li>
 </ul>
+
+<h2>Volatility 3 - 101</h2>
+<b>Memory Image Informations</b>
+<p>vol.py -f "image.file" windows.info</p>
+<h3>Process Infos, Handles, CmdLines and Network Infos (Windows)</h3>
+<b>Process Information</b>
+<p>vol.py -f "image.file" windows.pslist</p>
+<p>vol.py -f "image.file" windows.psscan</p>
+<p>vol.py -f "image.file" windows.pstree</p>
+<p>vol.py -f "image.file" windows.psxview</p>
+<b>Process Dump</b>
+<p>vol.py -f "image.file" windows.dumpfiles --pid PID</p>
+<b>Memory Dump</b>
+<p>vol.py -f "/path/to/file" windows.memmap ‑‑dump ‑‑pid PID</p>
+<b>Handles</b>
+<p>vol.py -f "/path/to/file" windows.handles ‑‑pid PID</p>
+<b>DLLS</b>
+<p>vol.py -f "/path/to/file" windows.dlllist ‑‑pid PID</p>
+<b>CmdLine</b>
+<p>vol.py -f "/path/to/file" windows.cmdline</p>
+<b>NetScan - NetStat</b>
+<p>vol.py -f "/path/to/file" windows.netscan</p>
+<p>vol.py -f "/path/to/file" windows.netstat</p>
+<h4>Registry (Windows)</h4>
+<b>HiveList</b>
+<p>vol.py -f "/path/to/file" windows.registry.hivescan</p>
+<p>vol.py -f "/path/to/file" windows.registry.hivelist</p>
+<b>PrintKey</b>
+<p>vol.py -f "/path/to/file" windows.registry.printkey</p>
+<p>vol.py -f "/path/to/file" windows.registry.printkey ‑‑key "Software\Microsoft\Windows\CurrentVersion"</p>
+<h4>Files (Windows)</h4>
+<b>File Scan</b>
+<p>vol.py -f "/path/to/file" windows.filescan</p>
+<b>Dump Files</b>
+<p>vol.py -f "/path/to/file" windows.dumpfiles</p>
+<p>vol.py -f "/path/to/file" windows.dumpfiles ‑‑virtaddr OFFSET</p>
+<p>vol.py -f "/path/to/file" windows.dumpfiles ‑‑physaddr OFFSET</p>
+<b>Others (Windows)</b>
+<b>Malfind</b>
+<p>vol.py -f "/path/to/file" windows.malfind</p>
+<b>YARA Scan</b>
+<p>vol.py -f "/path/to/file" windows.vadyarascan ‑‑yara-rules STRING</p>
+<p>vol.py -f "/path/to/file" windows.vadyarascan ‑‑yara-file "/path/to/file.yar"</p>
+<p>vol.py -f "/path/to/file" windows.vadyarascan ‑‑yara-file "/path/to/file.yar"</p>
