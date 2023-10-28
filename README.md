@@ -25,9 +25,9 @@
 </ul>
 
 <h2>Volatility 3 - 101</h2>
-<b>Memory Image Informations</b>
+<h4>Memory Image Informations</h4>
 <p>vol.py -f "image.file" windows.info</p>
-<h3>Process Infos, Handles, CmdLines and Network Infos (Windows)</h3>
+<h3>Process Infos (Windows)</h3>
 <b>Process Information</b>
 <p>vol.py -f "image.file" windows.pslist</p>
 <p>vol.py -f "image.file" windows.psscan</p>
@@ -37,15 +37,14 @@
 <p>vol.py -f "image.file" windows.dumpfiles --pid PID</p>
 <b>Memory Dump</b>
 <p>vol.py -f "/path/to/file" windows.memmap ‑‑dump ‑‑pid PID</p>
-<b>Handles</b>
-<p>vol.py -f "/path/to/file" windows.handles ‑‑pid PID</p>
-<b>DLLS</b>
-<p>vol.py -f "/path/to/file" windows.dlllist ‑‑pid PID</p>
+
+<h3>Command Line and NetScan (Windows)</h3>
 <b>CmdLine</b>
 <p>vol.py -f "/path/to/file" windows.cmdline</p>
 <b>NetScan - NetStat</b>
 <p>vol.py -f "/path/to/file" windows.netscan</p>
 <p>vol.py -f "/path/to/file" windows.netstat</p>
+
 <h4>Registry (Windows)</h4>
 <b>HiveList</b>
 <p>vol.py -f "/path/to/file" windows.registry.hivescan</p>
@@ -53,6 +52,7 @@
 <b>PrintKey</b>
 <p>vol.py -f "/path/to/file" windows.registry.printkey</p>
 <p>vol.py -f "/path/to/file" windows.registry.printkey ‑‑key "Software\Microsoft\Windows\CurrentVersion"</p>
+
 <h4>Files (Windows)</h4>
 <b>File Scan</b>
 <p>vol.py -f "/path/to/file" windows.filescan</p>
@@ -60,10 +60,15 @@
 <p>vol.py -f "/path/to/file" windows.dumpfiles</p>
 <p>vol.py -f "/path/to/file" windows.dumpfiles ‑‑virtaddr OFFSET</p>
 <p>vol.py -f "/path/to/file" windows.dumpfiles ‑‑physaddr OFFSET</p>
-<b>Others (Windows)</b>
+
+<h4>Others (Windows)</h4>
 <b>Malfind</b>
 <p>vol.py -f "/path/to/file" windows.malfind</p>
 <b>YARA Scan</b>
 <p>vol.py -f "/path/to/file" windows.vadyarascan ‑‑yara-rules STRING</p>
 <p>vol.py -f "/path/to/file" windows.vadyarascan ‑‑yara-file "/path/to/file.yar"</p>
 <p>vol.py -f "/path/to/file" windows.vadyarascan ‑‑yara-file "/path/to/file.yar"</p>
+<b>Handles</b>
+<p>vol.py -f "/path/to/file" windows.handles ‑‑pid PID</p>
+<b>DLLS</b>
+<p>vol.py -f "/path/to/file" windows.dlllist ‑‑pid PID</p>
