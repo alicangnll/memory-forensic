@@ -1,14 +1,3 @@
-# AFF4 Acquisition Tool for Python
-<h1>What is this ?</h1>
-<p>This program takes a memory image in AFF4 format and you can easily analyze the memory image with this memory image.</p>
-<h1>How can i use it?</h1>
-<p>You must be run "pymem_snapshot.py" file on Windows</p>
-<h1>OS Compatibility</h1>
-<p>Windows</p>
-<h1>Program Compatibility</h1>
-<p>FTK Memory Analyzer (Stable)</p>
-<p>Volatility (Testing)</p>
-<br>
 <h1>Memory Analyze 101</h1>
 <h2>Byte Markers and Meanings</h2>
 <h3>Files</h3>
